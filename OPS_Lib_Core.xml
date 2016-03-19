@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE TranscendenceLibrary
+	[
+	<!ENTITY OPS_unidOsakaPlayershipLib			"0xA0030012">
+	
+	<!ENTITY OPS_rsCivilianOsaka				"0xA0031200">
+	<!ENTITY OPS_rsPlayerOsakaBig				"0xA0031201">
+	<!ENTITY OPS_rsPlayerOsakaArmor				"0xA0031202">
+	<!ENTITY OPS_rsPlayerOsakaShield			"0xA0031203">
+	<!ENTITY OPS_scCivilianOsaka				"0xA0031204">
+	<!ENTITY OPS_itNakuraBolter				"0xA0031205">
+
+	<!ENTITY OPS_vvMiscAttributes				"0xA00312FE">
+	<!ENTITY OPS_rsOPSLibCover				"0xA00312FF">
+
+]>
+
+<TranscendenceLibrary
+	name="Osaka Playership"
+	credits="Wolfy; Special Thanks to AssumedPseudonym"
+	UNID="&OPS_unidOsakaPlayershipLib;"
+	release="1"
+	version="1.0.4.2"
+	coverImageID=	"&OPS_rsOPSLibCover;"
+	apiVersion="27">
+	<Image UNID="&OPS_rsOPSLibCover;"	bitmap="resources/images/covers/OsakaLibraryCover.jpg"  bitmask="resources/images/covers/Cover_Mask.jpg"/>
+
+<!-- LIBRARIES -->
+
+	<Library UNID="&unidHumanSpaceLibrary;"/>
+	
+<!-- MODULES -->
+
+	<Modules>
+		<Module filename="OPS_Images.xml"/>
+		<Module filename="OPS_Items_Generic.xml"/>
+		<Module filename="OPS_Ships_Generic.xml"/>
+	</Modules>
+
+<!-- GLOBALS -->
+
+	<Globals>
+	</Globals>
+
+<!-- GENERIC TYPES -->
+
+	<Type UNID="&OPS_vvMiscAttributes;">
+		<DisplayAttributes>
+			<!-- Manufacturer -->
+			<ItemAttribute label="Nakura"         		criteria="* +Nakura;"/>
+			<!-- Function -->
+			<!-- Etc -->
+		</DisplayAttributes>
+	</Type>
+
+</TranscendenceLibrary>

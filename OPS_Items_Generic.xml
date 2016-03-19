@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TranscendenceModule>
+
+<!--
+#########################
+### HEADER ###
+#########################
+-->
+
+	<ItemType UNID="&OPS_itNakuraBolter;"
+			name=				"Nakura bolter"
+			level=				"1"
+			value=				"300"
+			mass=				"2000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Nakura"
+			showReference=		"true"
+
+			description=		"The Nakura bolter is a recoilless cannon firing armor-piercing bolts."
+			>
+
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"kinetic:2d4; momentum1; armor:2"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				interaction=		"90"
+				lifetime=			"50"
+				powerUse=			"10"
+				
+				effect=				"&efKineticBoltDefault;"
+				sound=				"&snRecoillessCannon;"
+				>
+		</Weapon>
+	</ItemType>
+
+</TranscendenceModule>

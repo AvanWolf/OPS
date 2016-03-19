@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TranscendenceModule>
+
+<!--
+#########################
+### HEADER ###
+#########################
+-->
+
+	<ShipClass UNID="&OPS_scCivilianOsaka;"
+			manufacturer=			"Nakura Shipyards"
+			class=				"Osaka"
+			type=				"transport"
+
+			attributes=			"genericClass, freighter"
+			   
+			mass=				"100"
+			thrustRatio=			"3"
+			maxSpeed=			"20"
+			cargoSpace=			"75"
+			leavesWreck=		"90"
+			>
+
+		<!-- Configuration -->
+		
+		<Maneuver
+			maxRotationRate=	"9.0"
+			rotationAccel=		"1.5"
+			rotationStopAccel=	"9.0"
+			/>
+		<Armor
+			armorID=			"&itReactiveArmor;"
+			count=				"4"
+			/>
+		
+		<Devices>
+			<Device deviceID="&OPS_itNakuraBolter;"/>
+			<Device deviceID="&itClass2Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="4d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<!-- Image and Effects -->
+		
+		<Image imageID="&OPS_rsCivilianOsaka;" imageX="0" imageY="0" imageWidth="64" imageHeight="64"  rotationCount="120"/>
+
+		
+
+		<Effects>
+			<Effect type="thrustMain"		posAngle="160"	posRadius="26"	posZ="0"	rotation="180"/>
+			<Effect type="thrustMain"		posAngle="-160"	posRadius="26"	posZ="0"	rotation="180"/>
+			<!--<Effect type="rotateRight"		posAngle="45"	posRadius="20"	posZ="0"	rotation="135"/>
+			<Effect type="rotateRight"		posAngle="-110"	posRadius="16"	posZ="0"	rotation="315"/>
+			<Effect type="rotateLeft"		posAngle="-45"	posRadius="20"	posZ="0"	rotation="225"/>
+			<Effect type="rotateLeft"		posAngle="110"	posRadius="16"	posZ="0"	rotation="45"/>-->
+		</Effects>
+
+		<!-- AI and Behavior -->
+		
+		<AISettings
+			fireRateAdj=		"10"
+			fireAccuracy=		"95"
+			perception=		"4"
+			/>
+		
+	</ShipClass>
+
+</TranscendenceModule>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE TranscendenceExtension
+	[
+	<!ENTITY OPS_unidOPSExtension			"0xA0030011">
+	
+	<!ENTITY OPS_scPlayerOsaka				"0xA0031101">
+	<!ENTITY OPS_baPlayerOsakaBase				"0xA0031102">
+	<!ENTITY OPS_scPlayerOsakaEP				"0xA0031103">
+	
+	<!ENTITY OPS_rsOPSExtCover				"0xA00311FF">
+
+	<!-- Libraries -->
+
+
+	<!ENTITY OPS_unidOsakaPlayershipLib			"0xA0030012">
+
+]>
+
+<TranscendenceExtension
+	name="Osaka Playership"
+	credits="Wolfy; Special Thanks to AssumedPseudonym; Original Osaka by George Moromisato"
+	UNID="&OPS_unidOPSExtension;"
+	release="1"
+	version="1.0.4.1"
+	coverImageID=	"&OPS_rsOPSExtCover;"
+	apiVersion="27">
+	<Image UNID="&OPS_rsOPSExtCover;"	bitmap="resources/images/covers/OsakaExtensionCover.jpg"  bitmask="resources/images/covers/Cover_Mask.jpg"/>
+
+	<!-- Library to use -->
+
+	<Library UNID="&unidHumanSpaceLibrary;"/>
+	<Library unid="&OPS_unidOsakaPlayershipLib;"/>
+
+	<!-- Declarations -->
+
+
+	<ShipClass UNID="&OPS_baPlayerOsakaBase;"
+			class=				"(player Osaka base class)"
+			virtual=			"true" 
+			
+			attributes=			"baseClass" 
+			>
+
+		<PlayerSettings
+			desc=				"The Osaka was originally designed as a troop transport by the Nakura Corporation in the Frontier. The design proved to be versatile and robust, and has been used in many roles ranging from a missile ship to a freighter."
+			largeImage=			"&OPS_rsPlayerOsakaBig;"
+			initialClass=		"true"
+			startingCredits=	"8d25+100"
+			
+			startingSystem=		"SE"
+			startingPos=		"Start"
+			>
+
+			<ArmorDisplay>
+				<ShipImage imageID="&OPS_rsPlayerOsakaShield;" imageWidth="136" imageHeight="136"/>
+				
+				<ArmorSection name="forward"
+						imageID="&OPS_rsPlayerOsakaArmor;" 
+						imageX="0" imageY="0" imageWidth="52" imageHeight="29"
+						destX="42" destY="15" hpX="55" hpY="14"
+						nameY="8" nameBreakWidth="200" nameDestX="0" nameDestY="10" />
+
+				<ArmorSection name="starboard"
+						imageID="&OPS_rsPlayerOsakaArmor;" 
+						imageX="52" imageY="0" imageWidth="22" imageHeight="59"
+						destX="92" destY="45" hpX="95" hpY="60"
+						nameY="30" nameBreakWidth="360" nameDestX="12" nameDestY="0" />
+
+				<ArmorSection name="port"
+						imageID="&OPS_rsPlayerOsakaArmor;" 
+						imageX="142" imageY="0" imageWidth="22" imageHeight="59"
+						destX="22" destY="45" hpX="15" hpY="60"
+						nameY="52" nameBreakWidth="200" nameDestX="0" nameDestY="8" />
+
+				<ArmorSection name="aft"
+						imageID="&OPS_rsPlayerOsakaArmor;" 
+						imageX="74" imageY="0" imageWidth="68" imageHeight="14"
+						destX="34" destY="103" hpX="55" hpY="105"
+						nameY="74" nameBreakWidth="360" nameDestX="12" nameDestY="0" />
+			</ArmorDisplay>
+
+			<ShieldDisplay shieldLevelEffect="&efShieldHUDDefault;">
+			</ShieldDisplay>
+
+			<ReactorDisplay>
+				<Image imageID="&rsZubrinReactor;" 
+						imageX="0" imageY="0" imageWidth="256" imageHeight="60"/>
+
+				<PowerLevelImage imageID="&rsZubrinReactor;"
+						imageX="0" imageY="60" imageWidth="202" imageHeight="14"
+						destX="54" destY="9"/>
+
+				<FuelLevelImage imageID="&rsZubrinReactor;"
+						imageX="0" imageY="74" imageWidth="194" imageHeight="14"
+						destX="54" destY="37"/>
+
+				<FuelLowLevelImage imageID="&rsZubrinReactor;"
+						imageX="0" imageY="88" imageWidth="194" imageHeight="14"/>
+
+				<ReactorText x="62" y="22" width="154" height="14"/>
+				<PowerLevelText x="62" y="0" width="154" height="9"/>
+				<FuelLevelText x="62" y="51" width="154" height="9"/>
+			</ReactorDisplay>
+		</PlayerSettings>
+		
+	</ShipClass>
+	
+	<!-- Player Ship: Osaka-class Transport -->
+
+	<ShipClass UNID="&OPS_scPlayerOsaka;"
+			manufacturer=			"Nakura Shipyards"
+			class=				"Osaka"
+			type=				"transport"
+
+			attributes=			"00200000_PlayerShip"
+			inherit=			"&OPS_baPlayerOsakaBase;"
+			characterClass=		"&unidPilgrimClass;"
+			   
+			mass=				"100"
+			thrustRatio=			"3"
+			maxSpeed=			"20"
+			cargoSpace=			"75"
+
+			reactorPower=		"200"
+			fuelCapacity=		"42000"
+
+			maxArmor=			"12000"
+			maxCargoSpace=			"150"
+			maxDevices=			"7"
+			maxWeapons=			"3"
+
+			leavesWreck=		"90"
+			>
+
+		<!-- Configuration -->
+		
+		<Maneuver
+			maxRotationRate=	"9.0"
+			rotationAccel=		"1.5"
+			rotationStopAccel=	"9.0"
+			/>
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itReactiveArmor;"/>
+			<ArmorSection start="225" span="90" armorID="&itReactiveArmor;"/>
+			<ArmorSection start="45"  span="90" armorID="&itReactiveArmor;"/>
+			<ArmorSection start="135" span="90" armorID="&itReactiveArmor;"/>
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&OPS_itNakuraBolter;"/>
+			<Device deviceID="&itClass2Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="4d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<!-- Image and Effects -->
+		
+		<Image imageID="&OPS_rsCivilianOsaka;" imageX="0" imageY="0" imageWidth="64" imageHeight="64" rotationCount="120"/>
+
+		<Effects>
+			<Effect type="thrustMain"		posAngle="160"	posRadius="26"	posZ="0"	rotation="180"/>
+			<Effect type="thrustMain"		posAngle="-160"	posRadius="26"	posZ="0"	rotation="180"/>
+			<!--<Effect type="rotateRight"		posAngle="45"	posRadius="20"	posZ="0"	rotation="135"/>
+			<Effect type="rotateRight"		posAngle="-110"	posRadius="16"	posZ="0"	rotation="315"/>
+			<Effect type="rotateLeft"		posAngle="-45"	posRadius="20"	posZ="0"	rotation="225"/>
+			<Effect type="rotateLeft"		posAngle="110"	posRadius="16"	posZ="0"	rotation="45"/>-->
+		</Effects>
+		
+		<!-- AI and Behavior -->
+		
+		<AISettings
+			fireRateAdj=		"10"
+			fireAccuracy=		"95"
+			perception=		"4"
+			/>
+		
+	</ShipClass>
+
+	<ShipClass UNID="&OPS_scPlayerOsakaEP;"
+			manufacturer=			"Nakura Shipyards"
+			class=				"Osaka"
+			type=				"transport"
+
+			attributes=			"00900000_PlayerShip"
+			inherit=			"&OPS_baPlayerOsakaBase;"
+			characterClass=		"&unidCDMMercenaryClass;"
+			   
+			mass=				"100"
+			thrustRatio=			"3"
+			maxSpeed=			"20"
+			cargoSpace=			"75"
+
+			reactorPower=		"200"
+			fuelCapacity=		"42000"
+
+			maxArmor=			"12000"
+			maxCargoSpace=			"150"
+			maxDevices=			"7"
+			maxWeapons=			"3"
+
+			leavesWreck=		"90"
+			>
+		<PlayerSettings 
+			desc=				"The Osaka was originally designed as a troop transport by the Nakura Corporation in the Frontier. The design proved to be versatile and robust, and has been used in many roles ranging from a missile ship to a freighter."
+			largeImage=			"&OPS_rsPlayerOsakaBig;"
+			initialClass=		"true"
+			startingCredits=	"8d25+100"
+			
+			startingSystem=		"Kibo"
+			startingPos=		"Start"/>
+		<!-- Configuration -->
+		
+		<Maneuver
+			maxRotationRate=	"9.0"
+			rotationAccel=		"1.5"
+			rotationStopAccel=	"9.0"
+			/>
+		<Armor
+			armorID=			"&itReactiveArmor;"
+			count=				"4"
+			/>
+		
+		<Devices>
+			<Device deviceID="&OPS_itNakuraBolter;"/>
+			<Device deviceID="&itClass2Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="4d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<!-- Image and Effects -->
+		
+		<Image imageID="&OPS_rsCivilianOsaka;" imageX="0" imageY="0" imageWidth="64" imageHeight="64" rotationCount="120"/>
+
+		<Effects>
+			<Effect type="thrustMain"		posAngle="160"	posRadius="26"	posZ="0"	rotation="180"/>
+			<Effect type="thrustMain"		posAngle="-160"	posRadius="26"	posZ="0"	rotation="180"/>
+			<!--<Effect type="rotateRight"		posAngle="45"	posRadius="20"	posZ="0"	rotation="135"/>
+			<Effect type="rotateRight"		posAngle="-110"	posRadius="16"	posZ="0"	rotation="315"/>
+			<Effect type="rotateLeft"		posAngle="-45"	posRadius="20"	posZ="0"	rotation="225"/>
+			<Effect type="rotateLeft"		posAngle="110"	posRadius="16"	posZ="0"	rotation="45"/>-->
+		</Effects>
+		
+		<!-- AI and Behavior -->
+		
+		<AISettings
+			fireRateAdj=		"10"
+			fireAccuracy=		"95"
+			perception=		"4"
+			/>
+		
+	</ShipClass>
+
+</TranscendenceExtension>
