@@ -22,9 +22,9 @@
 	credits="Wolfy; Special Thanks to AssumedPseudonym; Original Osaka by George Moromisato"
 	UNID="&OPS_unidOPSExtension;"
 	release="1"
-	version="1.0.4.1"
+	version="1.0.4.2"
 	coverImageID=	"&OPS_rsOPSExtCover;"
-	apiVersion="27">
+	apiVersion="29">
 	<Image UNID="&OPS_rsOPSExtCover;"	bitmap="resources/images/covers/OsakaExtensionCover.jpg"  bitmask="resources/images/covers/Cover_Mask.jpg"/>
 
 	<!-- Library to use -->
@@ -129,6 +129,7 @@
 			maxCargoSpace=			"150"
 			maxDevices=			"7"
 			maxWeapons=			"3"
+			drivePowerUse=		"20"
 
 			leavesWreck=		"90"
 			>
