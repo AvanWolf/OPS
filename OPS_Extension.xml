@@ -22,7 +22,7 @@
 	credits="Wolfy; Special Thanks to AssumedPseudonym; Original Osaka by George Moromisato"
 	UNID="&OPS_unidOPSExtension;"
 	release="1"
-	version="1.0.4.2"
+	version="1.0.5.0"
 	coverImageID=	"&OPS_rsOPSExtCover;"
 	apiVersion="29">
 	<Image UNID="&OPS_rsOPSExtCover;"	bitmap="resources/images/covers/OsakaExtensionCover.jpg"  bitmask="resources/images/covers/Cover_Mask.jpg"/>
