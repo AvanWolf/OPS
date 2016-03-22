@@ -37,5 +37,26 @@
 				>
 		</Weapon>
 	</ItemType>
+	
+	<ItemType UNID="&OPS_itNakura20MWReactor;"
+			name=				"Osaka-20 reactor"
+			level=				"3"
+			value=				"2700"
+			frequency=			"notRandom"
+			mass=				"1000"
+			attributes=			"MajorItem; Nakura"
 
+			description=		"The Osaka-20 reactor was engineered specifically for the original series of Osaka-class ships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="288" imageWidth="96" imageHeight="96"/>
+
+		<ReactorDevice
+				maxPower=		"200"
+				fuelEfficiency=	"15"
+				maxFuel=		"42000"
+				fuelCriteria=	"f L:1-4;" 
+				/>
+
+	</ItemType>
 </TranscendenceModule>

@@ -10,7 +10,7 @@
 
 	<Image UNID="&OPS_rsCivilianOsaka;"		bitmap="resources/images/CivilianOsaka.jpg"		bitmask="resources/images/CivilianOsaka_Mask.bmp"/>
 	<Image UNID="&OPS_rsPlayerOsakaBig;"		bitmap="resources/images/playership/OsakaBig.jpg"	bitmask="resources/images/playership/OsakaBigMask.bmp"	loadOnUse="true"/>
-	<Image UNID="&OPS_rsPlayerOsakaArmor;"		bitmap="resources/images/playership/OsakaHUDArmor.jpg"/>
-	<Image UNID="&OPS_rsPlayerOsakaShield;"		bitmap="resources/images/playership/OsakaHUDShields.jpg"/>
+	<Image UNID="&OPS_rsPlayerOsakaArmor;"		bitmap="resources/images/playership/OsakaHUDArmor.bmp"/>
+	<Image UNID="&OPS_rsPlayerOsakaShield;"		bitmap="resources/images/playership/OsakaHUDShields.bmp"/>
 
 </TranscendenceModule>

@@ -10,6 +10,7 @@
 	<!ENTITY OPS_rsPlayerOsakaShield			"0xA0031203">
 	<!ENTITY OPS_scCivilianOsaka				"0xA0031204">
 	<!ENTITY OPS_itNakuraBolter				"0xA0031205">
+	<!ENTITY OPS_itNakura20MWReactor			"0xA0031206">
 
 	<!ENTITY OPS_vvMiscAttributes				"0xA00312FE">
 	<!ENTITY OPS_rsOPSLibCover				"0xA00312FF">

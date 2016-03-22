@@ -151,6 +151,7 @@
 		<Devices>
 			<Device deviceID="&OPS_itNakuraBolter;"/>
 			<Device deviceID="&itClass2Deflector;"/>
+			<Device deviceID="&OPS_itNakura20MWReactor;"/>
 		</Devices>
 
 		<Items>
